@@ -26,6 +26,7 @@
     <PackageReference Include="System.ServiceModel.Http" Version="4.9.0" />
   </ItemGroup>
   <ItemGroup Condition="'$(TargetFramework)' == 'net40'">
+    <Reference Include="System.Security" />
     <Reference Include="System.ServiceModel">
       <HintPath>C:\Windows\Microsoft.NET\Framework64\v4.0.30319\System.ServiceModel.dll</HintPath>
     </Reference>
