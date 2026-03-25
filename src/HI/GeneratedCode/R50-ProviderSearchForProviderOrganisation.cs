@@ -1782,7 +1782,8 @@ namespace nehta.mcaR50.ProviderSearchForProviderOrganisation
         public ProviderSearchForProviderOrganisationPortTypeClient()
         {
         }
-        
+
+#if !NET10_0_OR_GREATER
         public ProviderSearchForProviderOrganisationPortTypeClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName)
         {
@@ -1797,7 +1798,8 @@ namespace nehta.mcaR50.ProviderSearchForProviderOrganisation
                 base(endpointConfigurationName, remoteAddress)
         {
         }
-        
+#endif
+
         public ProviderSearchForProviderOrganisationPortTypeClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress)
         {

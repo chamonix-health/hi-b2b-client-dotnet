@@ -2115,7 +2115,8 @@ namespace nehta.mcaR51.ProviderBatchAsyncSearchForProviderOrganisation
         public SearchForProviderOrganisationBatchAsyncPortTypeClient()
         {
         }
-        
+
+#if !NET10_0_OR_GREATER
         public SearchForProviderOrganisationBatchAsyncPortTypeClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName)
         {
@@ -2130,7 +2131,8 @@ namespace nehta.mcaR51.ProviderBatchAsyncSearchForProviderOrganisation
                 base(endpointConfigurationName, remoteAddress)
         {
         }
-        
+#endif
+
         public SearchForProviderOrganisationBatchAsyncPortTypeClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress)
         {

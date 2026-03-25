@@ -6611,7 +6611,8 @@ namespace nehta.mcaR51.ProviderManageTdsProviderIndividual
         public ProviderManageTdsProviderIndividualPortTypeClient()
         {
         }
-        
+
+#if !NET10_0_OR_GREATER
         public ProviderManageTdsProviderIndividualPortTypeClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName)
         {
@@ -6626,7 +6627,8 @@ namespace nehta.mcaR51.ProviderManageTdsProviderIndividual
                 base(endpointConfigurationName, remoteAddress)
         {
         }
-        
+#endif
+
         public ProviderManageTdsProviderIndividualPortTypeClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress)
         {

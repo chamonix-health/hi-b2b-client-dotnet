@@ -3875,7 +3875,8 @@ namespace nehta.mcaR40Mod.CreateVerifiedIHI
         public ConsumerCreateVerifiedIHIPortTypeClient()
         {
         }
-        
+
+#if !NET10_0_OR_GREATER
         public ConsumerCreateVerifiedIHIPortTypeClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName)
         {
@@ -3890,7 +3891,8 @@ namespace nehta.mcaR40Mod.CreateVerifiedIHI
                 base(endpointConfigurationName, remoteAddress)
         {
         }
-        
+#endif
+
         public ConsumerCreateVerifiedIHIPortTypeClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress)
         {

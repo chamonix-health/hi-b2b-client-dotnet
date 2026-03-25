@@ -6259,7 +6259,8 @@ namespace nehta.mcaR51.ProviderSearchTdsProviderIndividual
         public ProviderSearchTdsProviderIndividualPortTypeClient()
         {
         }
-        
+
+#if !NET10_0_OR_GREATER
         public ProviderSearchTdsProviderIndividualPortTypeClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName)
         {
@@ -6274,7 +6275,8 @@ namespace nehta.mcaR51.ProviderSearchTdsProviderIndividual
                 base(endpointConfigurationName, remoteAddress)
         {
         }
-        
+#endif
+
         public ProviderSearchTdsProviderIndividualPortTypeClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress)
         {

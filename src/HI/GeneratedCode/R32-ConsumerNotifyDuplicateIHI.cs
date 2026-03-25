@@ -1871,7 +1871,8 @@ namespace nehta.mcaR32.ConsumerNotifyDuplicateIHI
         public ConsumerNotifyDuplicateIHIPortTypeClient()
         {
         }
-        
+
+#if !NET10_0_OR_GREATER
         public ConsumerNotifyDuplicateIHIPortTypeClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName)
         {
@@ -1886,7 +1887,8 @@ namespace nehta.mcaR32.ConsumerNotifyDuplicateIHI
                 base(endpointConfigurationName, remoteAddress)
         {
         }
-        
+#endif
+
         public ConsumerNotifyDuplicateIHIPortTypeClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress)
         {

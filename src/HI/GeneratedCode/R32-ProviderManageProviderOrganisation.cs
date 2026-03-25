@@ -5845,7 +5845,8 @@ namespace nehta.mcaR32.ProviderManageProviderOrganisation
         public ProviderManageProviderOrganisationPortTypeClient()
         {
         }
-        
+
+#if !NET10_0_OR_GREATER
         public ProviderManageProviderOrganisationPortTypeClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName)
         {
@@ -5860,7 +5861,8 @@ namespace nehta.mcaR32.ProviderManageProviderOrganisation
                 base(endpointConfigurationName, remoteAddress)
         {
         }
-        
+#endif
+
         public ProviderManageProviderOrganisationPortTypeClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress)
         {

@@ -547,10 +547,12 @@ namespace Nehta.VendorLibrary.HI
 
                 client = new ConsumerSearchIHIBatchAsyncPortTypeClient(tlsBinding, address);
             }
+#if !NET10_0_OR_GREATER
             else if (!string.IsNullOrEmpty(endpointConfigurationName))
             {
                 client = new ConsumerSearchIHIBatchAsyncPortTypeClient(endpointConfigurationName);
             }
+#endif
 
             if (client != null)
             {

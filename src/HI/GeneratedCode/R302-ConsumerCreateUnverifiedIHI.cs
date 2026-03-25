@@ -5870,7 +5870,8 @@ namespace nehta.mcaR302.ConsumerCreateUnverifiedIHI
         public ConsumerCreateUnverifiedIHIPortTypeClient()
         {
         }
-        
+
+#if !NET10_0_OR_GREATER
         public ConsumerCreateUnverifiedIHIPortTypeClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName)
         {
@@ -5885,7 +5886,8 @@ namespace nehta.mcaR302.ConsumerCreateUnverifiedIHI
                 base(endpointConfigurationName, remoteAddress)
         {
         }
-        
+#endif
+
         public ConsumerCreateUnverifiedIHIPortTypeClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress)
         {

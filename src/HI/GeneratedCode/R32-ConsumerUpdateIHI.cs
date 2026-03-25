@@ -6117,7 +6117,8 @@ namespace nehta.mcaR32.ConsumerUpdateIHI
         public ConsumerUpdateIHIPortTypeClient()
         {
         }
-        
+
+#if !NET10_0_OR_GREATER
         public ConsumerUpdateIHIPortTypeClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName)
         {
@@ -6132,7 +6133,8 @@ namespace nehta.mcaR32.ConsumerUpdateIHI
                 base(endpointConfigurationName, remoteAddress)
         {
         }
-        
+#endif
+
         public ConsumerUpdateIHIPortTypeClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress)
         {

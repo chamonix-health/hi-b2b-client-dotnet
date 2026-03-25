@@ -478,10 +478,12 @@ namespace Nehta.VendorLibrary.HI
 
                 client = new ProviderSearchHIProviderDirectoryForIndividualPortTypeClient(tlsBinding, address);
             }
+#if !NET10_0_OR_GREATER
             else if (!string.IsNullOrEmpty(endpointConfigurationName))
             {
                 client = new ProviderSearchHIProviderDirectoryForIndividualPortTypeClient(endpointConfigurationName);
             }
+#endif
 
             if (client != null)
             {

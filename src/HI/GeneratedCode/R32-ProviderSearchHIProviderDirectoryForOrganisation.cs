@@ -6042,7 +6042,8 @@ namespace nehta.mcaR32.ProviderSearchHIProviderDirectoryForOrganisation
         public ProviderSearchHIProviderDirectoryForOrganisationPortTypeClient()
         {
         }
-        
+
+#if !NET10_0_OR_GREATER
         public ProviderSearchHIProviderDirectoryForOrganisationPortTypeClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName)
         {
@@ -6057,7 +6058,8 @@ namespace nehta.mcaR32.ProviderSearchHIProviderDirectoryForOrganisation
                 base(endpointConfigurationName, remoteAddress)
         {
         }
-        
+#endif
+
         public ProviderSearchHIProviderDirectoryForOrganisationPortTypeClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress)
         {

@@ -329,10 +329,12 @@ namespace Nehta.VendorLibrary.HI
 
                 client = new ConsumerCreateVerifiedIHIPortTypeClient(tlsBinding, address);
             }
+#if !NET10_0_OR_GREATER
             else if (!string.IsNullOrEmpty(endpointConfigurationName))
             {
                 client = new ConsumerCreateVerifiedIHIPortTypeClient(endpointConfigurationName);
             }
+#endif
 
             if (client != null)
             {

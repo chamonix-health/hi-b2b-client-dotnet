@@ -5105,7 +5105,8 @@ namespace nehta.mcaR3.ConsumerSearchIHI
         public ConsumerSearchIHIPortTypeClient()
         {
         }
-        
+
+#if !NET10_0_OR_GREATER
         public ConsumerSearchIHIPortTypeClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName)
         {
@@ -5120,6 +5121,7 @@ namespace nehta.mcaR3.ConsumerSearchIHI
                 base(endpointConfigurationName, remoteAddress)
         {
         }
+#endif
         
         public ConsumerSearchIHIPortTypeClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress)

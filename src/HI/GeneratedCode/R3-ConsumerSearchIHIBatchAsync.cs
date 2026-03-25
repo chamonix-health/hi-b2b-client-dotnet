@@ -5711,7 +5711,8 @@ namespace nehta.mcaR3.ConsumerSearchIHIBatchAsync
         public ConsumerSearchIHIBatchAsyncPortTypeClient()
         {
         }
-        
+
+#if !NET10_0_OR_GREATER
         public ConsumerSearchIHIBatchAsyncPortTypeClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName)
         {
@@ -5726,6 +5727,7 @@ namespace nehta.mcaR3.ConsumerSearchIHIBatchAsync
                 base(endpointConfigurationName, remoteAddress)
         {
         }
+#endif
         
         public ConsumerSearchIHIBatchAsyncPortTypeClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress)

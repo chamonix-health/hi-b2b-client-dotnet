@@ -2341,7 +2341,8 @@ namespace nehta.mcaR32.ProviderManageProviderDirectoryEntry
         public ProviderManageProviderDirectoryEntryPortTypeClient()
         {
         }
-        
+
+#if !NET10_0_OR_GREATER
         public ProviderManageProviderDirectoryEntryPortTypeClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName)
         {
@@ -2356,7 +2357,8 @@ namespace nehta.mcaR32.ProviderManageProviderDirectoryEntry
                 base(endpointConfigurationName, remoteAddress)
         {
         }
-        
+#endif
+
         public ProviderManageProviderDirectoryEntryPortTypeClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress)
         {

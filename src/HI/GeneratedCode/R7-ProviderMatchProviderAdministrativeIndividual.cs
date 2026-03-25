@@ -1026,7 +1026,8 @@ namespace nehta.mcaR7.ProviderMatchProviderAdministrativeIndividual
         public MatchProviderAdministrativeIndividualPortTypeClient()
         {
         }
-        
+
+#if !NET10_0_OR_GREATER
         public MatchProviderAdministrativeIndividualPortTypeClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName)
         {
@@ -1041,7 +1042,8 @@ namespace nehta.mcaR7.ProviderMatchProviderAdministrativeIndividual
                 base(endpointConfigurationName, remoteAddress)
         {
         }
-        
+#endif
+
         public MatchProviderAdministrativeIndividualPortTypeClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress)
         {

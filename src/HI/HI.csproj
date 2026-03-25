@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>net472;netstandard2.0</TargetFrameworks>
+    <TargetFrameworks>net472;netstandard2.0;net10.0</TargetFrameworks>
     <OutputType>Library</OutputType>
     <RootNamespace>Nehta.VendorLibrary.HI</RootNamespace>
     <AssemblyName>Nehta.VendorLibrary.HI</AssemblyName>
@@ -27,11 +27,21 @@
 	  <!-- Suppress specific warnings -->
     <NoWarn>1701;1702;CS1591;</NoWarn>
   </PropertyGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'net10.0'">
+    <PackageReference Include="System.ServiceModel.Http" Version="10.0.652802" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+    <PackageReference Include="System.ServiceModel.Http" Version="4.10.3" />
+    <PackageReference Include="System.Formats.Asn1" Version="10.0.5" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'net472'">
+    <PackageReference Include="System.ServiceModel.Http" Version="4.10.3" />
+    <PackageReference Include="System.Formats.Asn1" Version="10.0.5" />
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Nehta.VendorLibrary.Common" Version="4.3.0" />
-    <PackageReference Include="System.Formats.Asn1" Version="10.0.5" />
     <PackageReference Include="System.Security.Cryptography.Pkcs" Version="10.0.5" />
-    <PackageReference Include="System.ServiceModel.Http" Version="4.10.3" />
+    <PackageReference Include="System.Security.Cryptography.Xml" Version="10.0.5" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">

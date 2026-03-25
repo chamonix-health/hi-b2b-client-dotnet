@@ -1816,7 +1816,8 @@ namespace nehta.mcaR32.ProviderReadReferenceData
         public ProviderReadReferenceDataPortTypeClient()
         {
         }
-        
+
+#if !NET10_0_OR_GREATER
         public ProviderReadReferenceDataPortTypeClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName)
         {
@@ -1831,7 +1832,8 @@ namespace nehta.mcaR32.ProviderReadReferenceData
                 base(endpointConfigurationName, remoteAddress)
         {
         }
-        
+#endif
+
         public ProviderReadReferenceDataPortTypeClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress)
         {

@@ -5780,7 +5780,8 @@ namespace nehta.mcaR32.ProviderReadProviderOrganisation
         public ProviderReadProviderOrganisationPortTypeClient()
         {
         }
-        
+
+#if !NET10_0_OR_GREATER
         public ProviderReadProviderOrganisationPortTypeClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName)
         {
@@ -5795,7 +5796,8 @@ namespace nehta.mcaR32.ProviderReadProviderOrganisation
                 base(endpointConfigurationName, remoteAddress)
         {
         }
-        
+#endif
+
         public ProviderReadProviderOrganisationPortTypeClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress)
         {

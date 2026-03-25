@@ -243,10 +243,12 @@ namespace Nehta.VendorLibrary.HI
 
                 client = new ProviderReadProviderOrganisationPortTypeClient(tlsBinding, address);
             }
+#if !NET10_0_OR_GREATER
             else if (!string.IsNullOrEmpty(endpointConfigurationName))
             {
                 client = new ProviderReadProviderOrganisationPortTypeClient(endpointConfigurationName);
             }
+#endif
 
             if (client != null)
             {

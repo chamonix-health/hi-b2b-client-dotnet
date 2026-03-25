@@ -1834,7 +1834,8 @@ namespace nehta.mcaR3.ConsumerMergeProvisionalIHI
         public ConsumerMergeProvisionalIHIPortTypeClient()
         {
         }
-        
+
+#if !NET10_0_OR_GREATER
         public ConsumerMergeProvisionalIHIPortTypeClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName)
         {
@@ -1849,6 +1850,7 @@ namespace nehta.mcaR3.ConsumerMergeProvisionalIHI
                 base(endpointConfigurationName, remoteAddress)
         {
         }
+#endif
         
         public ConsumerMergeProvisionalIHIPortTypeClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress)

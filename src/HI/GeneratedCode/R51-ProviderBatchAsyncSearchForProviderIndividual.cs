@@ -5278,7 +5278,8 @@ namespace nehta.mcaR51.ProviderBatchAsyncSearchForProviderIndividual
         public SearchForProviderIndividualBatchAsyncPortTypeClient()
         {
         }
-        
+
+#if !NET10_0_OR_GREATER
         public SearchForProviderIndividualBatchAsyncPortTypeClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName)
         {
@@ -5293,7 +5294,8 @@ namespace nehta.mcaR51.ProviderBatchAsyncSearchForProviderIndividual
                 base(endpointConfigurationName, remoteAddress)
         {
         }
-        
+#endif
+
         public SearchForProviderIndividualBatchAsyncPortTypeClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress)
         {
